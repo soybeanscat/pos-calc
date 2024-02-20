@@ -7,10 +7,30 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1>Simple Calculator</h1>
-    <input type="number" id="number1" placeholder="Number 1">
-    <input type="number" id="number2" placeholder="Number 2">
+    <h1>Position Calculator</h1>
+    <h2>Portfolio Setup</h2>
+    Portfolio Size <input type="number" id="size_portfolio" placeholder="Portfolio Size"><br>
+    Risk Profile <input type="number" id="risk_per_pos" placeholder="Maximum Risk per Position">
+
+    <h2>Order Setup</h2>
+    <h3>For DCA Order</h3>
+    Upper Entry Price <input type="number" id="ep_upper" placeholder="Upper Price">
+    Lower Entry Price <input type="number" id="ep_lower" placeholder="Lower Price">
+    <h3>For Single Entry Order</h3>
+    Entry Price <input type="number" id="ep_single" placeholder="Entry Price"><br>
+
+    Sell Loss Price <input type="number" id="price_sl" placeholder="Sell Loss"><br>
+    Order Count <input type="number" id="count_order" placeholder="Order Count"><br>
+    
     <button onclick="calculate()">Calculate</button>
-    <p>Result: <span id="result"></span></p>
+    
+    <p><h2>Order Builder</h2>
+    <span id="result"></span>
+    Order prices: <span id="ep_array"></span><br>
+    Total size: <span id="pos_size_total"></span> Size per order: <span id="pos_size_order"></span><br>
+    Total ticks: <span id="tick_total"></span> Tick per order: <span id="tick_order"></span><br>
+    Max leverage: <span id="lev_max"></span><br>
+    Total margin: <span id="margin_total"></span><br>
+    Risk percentage: <span id="risk_sl"></span> Risk amount: <span id="risk_sl_amount"></span></p>
 </body>
 </html>
